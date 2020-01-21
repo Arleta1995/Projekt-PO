@@ -1,0 +1,9 @@
+C:\Users\Lenovo\Desktop\Studia\IE\Projektowanie obiektowe\ProjectShelf\bin\Debug\ProjectShelf.exe.config
+C:\Users\Lenovo\Desktop\Studia\IE\Projektowanie obiektowe\ProjectShelf\bin\Debug\ProjectShelf.exe
+C:\Users\Lenovo\Desktop\Studia\IE\Projektowanie obiektowe\ProjectShelf\bin\Debug\ProjectShelf.pdb
+C:\Users\Lenovo\Desktop\Studia\IE\Projektowanie obiektowe\ProjectShelf\obj\Debug\ProjectShelf.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\Studia\IE\Projektowanie obiektowe\ProjectShelf\obj\Debug\ProjectShelf.Form1.resources
+C:\Users\Lenovo\Desktop\Studia\IE\Projektowanie obiektowe\ProjectShelf\obj\Debug\ProjectShelf.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\Studia\IE\Projektowanie obiektowe\ProjectShelf\obj\Debug\ProjectShelf.csproj.GenerateResource.cache
+C:\Users\Lenovo\Desktop\Studia\IE\Projektowanie obiektowe\ProjectShelf\obj\Debug\ProjectShelf.exe
+C:\Users\Lenovo\Desktop\Studia\IE\Projektowanie obiektowe\ProjectShelf\obj\Debug\ProjectShelf.pdb
