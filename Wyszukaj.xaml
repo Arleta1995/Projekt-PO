@@ -1,0 +1,22 @@
+﻿<Window x:Class="Apka.Wyszukaj"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Apka"
+        mc:Ignorable="d"
+        Title="Wyszukaj" Height="450" Width="800">
+    <Grid>
+        <Rectangle Fill="AliceBlue"/>
+        <TextBlock x:Name="WyszukajBlock" HorizontalAlignment="Left" Margin="313,10,0,0" TextWrapping="Wrap" Text="WYSZUKAJ" VerticalAlignment="Top" Height="50" Width="212" FontWeight="Bold" FontSize="30"/>
+        <TextBlock x:Name="AutorBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="AUTOR" VerticalAlignment="Top" Margin="121,98,0,0" FontSize="16" FontWeight="Bold" Height="21" Width="79"/>
+        <TextBlock x:Name="TytulBlock" HorizontalAlignment="Left" Margin="121,142,0,0" TextWrapping="Wrap" Text="TYTUŁ" VerticalAlignment="Top" Height="22" Width="79" FontWeight="Bold" FontSize="16"/>
+        <TextBlock x:Name="GatunekBlock" HorizontalAlignment="Left" Margin="121,186,0,0" TextWrapping="Wrap" Text="GATUNEK" VerticalAlignment="Top" Height="23" Width="79" FontWeight="Bold" FontSize="16"/>
+        <TextBox x:Name="AutorBox" HorizontalAlignment="Left" Height="21" Margin="249,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" FontSize="16"/>
+        <TextBox x:Name="TytulBox" HorizontalAlignment="Left" Height="22" Margin="249,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" FontSize="16"/>
+        <TextBox x:Name="GatunekBox" HorizontalAlignment="Left" Height="23" Margin="249,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" FontSize="16"/>
+        <Button x:Name="WyszukajButton" Content="WYSZUKAJ" HorizontalAlignment="Left" Margin="537,204,0,0" VerticalAlignment="Top" Width="166" Height="39" FontWeight="Bold" FontSize="16" Click="WyszukajButton_Click"/>
+        <DataGrid x:Name="WyszukajDataGrid" HorizontalAlignment="Left" Height="152" Margin="10,257,0,0" VerticalAlignment="Top" Width="772"/>
+
+    </Grid>
+</Window>

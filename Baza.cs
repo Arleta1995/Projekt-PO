@@ -8,7 +8,9 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 
-namespace ProjectShelf
+// źródło: http://jakub.otrzasek.pl/sql/412/ado-net-podlaczenie-sie-do-bazy-sql-server-w-c/
+
+namespace Apka
 {
     class Baza
     {
@@ -23,26 +25,57 @@ namespace ProjectShelf
         public Baza(string user, string pass, string instance, string dbdir)
         // Konstruktor do tworzenia polaczenia za pomoca autoryzacji SQL Server
         {
+            /*SqlConnection*/
             polaczenie = new SqlConnection();
-            polaczenie.ConnectionString = "user id=" + user + ";" +
-            "password=" + pass + ";Data Source=" + instance + ";" +
+            polaczenie.ConnectionString = "user id=" + "Tester" + ";" +
+            "password=" + "test" + ";Data Source=" + "Server = localhost, LENOVO02;" + "; " +
             "Trusted_Connection=no;" +
-            "database=" + dbdir + "; " + //podejżewam że tu powinna być nasza baza danych
+            "database=" + "MyMusic" + "; " + //podejżewam że tu powinna być nasza baza danych
             "connection timeout=3";
-            polaczenie.Open();
+            try
+            {
+                polaczenie.Open();
+                //
+            }
+            catch (System.Data.SqlClient.SqlException sqe) 
+            {
+                Console.WriteLine(sqe.Message);
+            }
+            finally
+            {
+                if (polaczenie.State == ConnectionState.Open)
+                    polaczenie.Close();
+            }
+
         }
+
         /// <summary>
         /// 
         /// </summary>
         /// <param name="instance"></param>
         /// <param name="dbdir"></param>
         public Baza(string instance, string dbdir)
-           
+        //konstruktor do tworzeniapołączenia zapomocą autoryzacji windows//
         {
-            polaczenie.ConnectionString = "Data Source=" + instance + ";" +
-            "Trusted_Connection=yes;" +
-            "database=" + dbdir + "; " + //podejżewam że tu powinna być nasza baza danych
-            "connection timeout=3";
+            /*SqlConnection*/
+            polaczenie = new SqlConnection();
+            polaczenie.ConnectionString = "Server = localhost\\LENOVO02\\MSSQLSERVER; Database = MyMusic; Trusted_Connection = True;";
+            //using (SqlConnection polaczenie = new SqlConnection(connectionString)) ;
+                try
+                {
+                    polaczenie.Open();
+                    //
+                }
+                catch (System.Data.SqlClient.SqlException sqe) // to chyba jest źle
+                {
+                    Console.WriteLine(sqe.Message);
+                }
+                finally
+                {
+                    if (polaczenie.State == ConnectionState.Open)
+                        polaczenie.Close();
+                }
+            polaczenie.Open();
         }
 
         /// <summary>
